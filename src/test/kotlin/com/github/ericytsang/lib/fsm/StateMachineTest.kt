@@ -1,6 +1,6 @@
 package com.github.ericytsang.lib.fsm
 
-import com.github.ericytsang.lib.observe.Change
+import com.github.ericytsang.lib.observe.FieldChange
 import org.junit.Test
 import kotlin.concurrent.withLock
 
@@ -104,7 +104,7 @@ class StateMachineTest
 
         init
         {
-            stateMachine.observers += Change.Observer.new()
+            stateMachine.observers += FieldChange.Observer.new()
             {
                 stateMachine.stateAccess
             }
